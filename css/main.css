@@ -1,0 +1,336 @@
+/**
+ * Dragdealer JS v0.9.5
+ * http://code.ovidiu.ch/dragdealer-js
+ *
+ * Copyright (c) 2010, Ovidiu Chereches
+ * MIT License
+ * http://legal.ovidiu.ch/licenses/MIT
+ */
+
+
+body {
+background-color:#D5D5D5;
+}
+
+.container {
+width:5250px;
+height:5250px;
+position: absolute;
+margin: 0px;
+border: 0px;
+padding 0px;
+left:0px;
+top:0px;
+}
+
+.XDF_blurred {
+position: absolute;
+margin: 0px;
+border: 0px;
+padding 0px;
+left:0px;
+top:0px;
+-webkit-filter: url('#blur');
+filter: url('#blur');
+-webkit-filter: blur(5px);
+filter: blur(5px);
+}
+
+.XDF {
+position: absolute;
+margin: 0px;
+border: 0px;
+padding 0px;
+left:0px;
+top:0px;
+}
+
+.MultiWave {
+visibility:hidden;
+margin:0;
+padding:0;
+position:fixed;
+width:600px;
+height:800px;
+border:none;
+overflow: scroll;
+}
+
+
+.intro_background {
+visibility:visible;
+position:fixed;
+margin:0px;
+padding:0px;
+border:0px;
+width:100%;
+height:100%;
+background-color:#000;
+opacity:0.1;
+left:0px;
+top:0px;
+Z-index:100;
+}
+
+.intro {
+visibility:visible;
+position:fixed;
+padding:50px;
+width:500px;
+height:300px;
+top:50%;
+left:50%;
+font-size: 14px;
+font-family: 'Noto Sans', sans-serif;
+background-color:#222;
+opacity:0.9;
+color:#CCC;
+margin:-150px 0 0 -250px;
+Z-index:100;
+}
+
+.close {
+position:absolute;
+top:-8px;
+right:-8px;
+
+width:24px;
+height:24px;
+}
+
+
+.intro a {
+color:#FFF;
+}
+
+.small {
+font-size: 10px;
+}
+
+.top {
+position: absolute;
+color:#666;
+width:20px;
+height:20px;
+/* margin:1px; */
+border:1px solid #FFF;
+opacity:0.05;
+}
+
+.top:hover
+{ 
+/* 
+margin:0px;
+border:1px solid #000;
+ */
+opacity:1.0;
+}
+
+
+.info {
+padding:10px;
+position:fixed;
+visibility:hidden;
+width:390px;
+height:100%;
+left:30px;
+bottom:0px;
+height:300px;
+font-size: 13px;
+font-family: 'Noto Sans', sans-serif;
+background-color:#222;
+opacity:0.9;
+}
+
+.SEDs {
+padding:10px;
+position: fixed;
+visibility:hidden;
+left:40px;
+bottom:10px;
+background-color:#FFF;
+width:370px;
+height:260px;
+}
+
+.SED_image {
+width:370px;
+}
+
+.id {
+position: fixed;
+visibility:hidden;
+left:40px;
+bottom:290px;
+color:#FFF;
+font-size: 16px;
+font-family: 'Noto Sans', sans-serif;
+opacity:0.5;
+text-shadow: 3px 3px #000000;
+}
+
+.z {
+position: fixed;
+visibility:hidden;
+left:125px;
+bottom:290px;
+color:#FFF;
+font-size: 13px;
+font-family: 'Noto Sans', sans-serif;
+opacity:0.7;
+text-shadow: 3px 3px #000000;
+}
+
+
+
+.thumbs {
+border:1px solid #333;
+position: fixed;
+visibility:hidden;
+right:10px;
+top:10px;
+background-color:#000;
+width:80%;
+max-width:1244px;
+}
+
+
+
+
+.z_label {
+position: absolute;
+visibility:hidden;
+left:320px;
+color:#FFF;
+font-size: 8px;
+font-family: 'Noto Sans', sans-serif;
+opacity:0.3;
+}
+
+.controls {
+padding:30px;
+position:fixed;
+width:120px;
+height:250px;
+right:0px;
+bottom:-30px;
+background-color:#222;
+opacity:0.9;
+color:#FFF;
+font-size: 11px;
+font-family: 'Noto Sans', sans-serif;
+text-align:right;
+}
+
+.filters {
+padding:30px;
+position:fixed;
+width:60px;
+height:250px;
+right:190px;
+bottom:-30px;
+background-color:#222;
+opacity:0.9;
+color:#FFF;
+font-size: 11px;
+font-family: 'Noto Sans', sans-serif;
+text-align:right;
+}
+
+
+.controls a {
+color:#FFF;
+}
+
+
+.Lum {
+border:3px solid #FFF;
+position: absolute;
+visibility:hidden;
+border-radius: 50%;
+opacity:0.15;
+}
+
+
+
+
+
+
+/* SLIDE THREE */
+.slideThree {
+	width: 60px;
+	height: 20px;
+	background: #333;
+	margin: 20px auto;
+
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	position: fixed;
+
+	-webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+	-moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+}
+
+.slideThree:after {
+	content: 'OFF';
+	font: 12px/26px Arial, sans-serif;
+	color: #000;
+	position: absolute;
+	right: 10px;
+	z-index: 0;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px rgba(255,255,255,.15);
+}
+
+.slideThree:before {
+	content: 'ON';
+	font: 12px/26px Arial, sans-serif;
+	color: #00bf00;
+	position: absolute;
+	left: 10px;
+	z-index: 0;
+	font-weight: bold;
+}
+
+.slideThree label {
+	display: block;
+	width: 34px;
+	height: 20px;
+
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	transition: all .4s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	z-index: 1;
+
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+	background: #fcfff4;
+
+	background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+}
+
+.slideThree input[type=checkbox]:checked + label {
+	left: 43px;
+}
+
+
+
+
